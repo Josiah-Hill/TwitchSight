@@ -169,13 +169,12 @@ for model_name in os.listdir():
 
 st.write('All models loaded.')
 
-OPENAI_API_KEY = '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'
 sbert_model_name = 'paraphrase-MiniLM-L6-v2'
 device = 'cpu'
 sbert = SentenceTransformer(sbert_model_name, device=device)
 
 def embed_text_openai(text, model="text-embedding-ada-002"):
-    client = openai.OpenAI(api_key=OPENAI_API_KEY)
+    client = openai.OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
     text = str(text).replace("\n", " ")
     response = client.embeddings.create(input=[text], model=model)
     return response.data[0].embedding
