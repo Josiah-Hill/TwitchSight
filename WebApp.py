@@ -140,7 +140,7 @@ nn_regsif_bert = NN_REGSIF_BERT()
 
 models = {}
 ml_model_names, dl_model_names = [], []
-for model_name in os.listdir('models/'):
+for model_name in os.listdir():
     model_first_name = model_name.split('.')[0]
     if '.pkl' == model_name[-4:] or '.pickle' in model_name[-7:]:
         ml_model_names.append(model_first_name)
