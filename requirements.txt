@@ -2,3 +2,4 @@ torch
 openai
 sentence_transformers
 xgboost
+lightgbm
