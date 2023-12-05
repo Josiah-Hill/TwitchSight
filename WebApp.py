@@ -169,9 +169,9 @@ for model_name in os.listdir('models/'):
 
 st.write('All models loaded.')
 
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = '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'
 sbert_model_name = 'paraphrase-MiniLM-L6-v2'
-device = 'cuda'
+device = 'cpu'
 sbert = SentenceTransformer(sbert_model_name, device=device)
 
 def embed_text_openai(text, model="text-embedding-ada-002"):
