@@ -149,22 +149,22 @@ for model_name in os.listdir():
     elif '.pt' == model_name[-3:] or '.pth' in model_name[-4:]:
         dl_model_names.append(model_first_name)
         if model_first_name == 'neural_network_classification_GPT':
-            nn_clf_gpt.load_state_dict(torch.load(f'models/{model_name}'))
+            nn_clf_gpt.load_state_dict(torch.load(f'{model_name}'))
             models[model_first_name] = nn_clf_gpt.to('cpu').eval()
         if model_first_name == 'neural_network_classification_BERT':
-            nn_clf_bert.load_state_dict(torch.load(f'models/{model_name}'))
+            nn_clf_bert.load_state_dict(torch.load(f'{model_name}'))
             models[model_first_name] = nn_clf_bert.to('cpu').eval()
         if model_first_name == 'neural_network_regression_GPT':
-            nn_reg_gpt.load_state_dict(torch.load(f'models/{model_name}'))
+            nn_reg_gpt.load_state_dict(torch.load(f'{model_name}'))
             models[model_first_name] = nn_reg_gpt.to('cpu').eval()
         if model_first_name == 'neural_network_regression_BERT':
-            nn_reg_bert.load_state_dict(torch.load(f'models/{model_name}'))
+            nn_reg_bert.load_state_dict(torch.load(f'{model_name}'))
             models[model_first_name] = nn_reg_bert.to('cpu').eval()
         if model_first_name == 'regsification_GPT':
-            nn_regsif_gpt.load_state_dict(torch.load(f'models/{model_name}'))
+            nn_regsif_gpt.load_state_dict(torch.load(f'{model_name}'))
             models[model_first_name] = nn_regsif_gpt.to('cpu').eval()
         if model_first_name == 'regsification_BERT':
-            nn_regsif_bert.load_state_dict(torch.load(f'models/{model_name}'))
+            nn_regsif_bert.load_state_dict(torch.load(f'{model_name}'))
             models[model_first_name] = nn_regsif_bert.to('cpu').eval()
 
 st.write('All models loaded.')
