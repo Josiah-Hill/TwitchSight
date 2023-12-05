@@ -169,7 +169,7 @@ for model_name in os.listdir():
 
 st.write('All models loaded.')
 
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = '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'
 sbert_model_name = 'paraphrase-MiniLM-L6-v2'
 device = 'cpu'
 sbert = SentenceTransformer(sbert_model_name, device=device)
