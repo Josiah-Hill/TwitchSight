@@ -144,7 +144,7 @@ for model_name in os.listdir():
     model_first_name = model_name.split('.')[0]
     if '.pkl' == model_name[-4:] or '.pickle' in model_name[-7:]:
         ml_model_names.append(model_first_name)
-        with open(f'models/{model_name}', 'rb') as f:
+        with open(f'{model_name}', 'rb') as f:
             models[model_first_name] = pickle.load(f)
     elif '.pt' == model_name[-3:] or '.pth' in model_name[-4:]:
         dl_model_names.append(model_first_name)
